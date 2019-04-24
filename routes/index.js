@@ -3,6 +3,7 @@ const router = express.Router();
 const db = require('mysql');
 const config = require('./config');
 let connection = db.createConnection(config);
+const passHash = require('password-hash');
 
 
 connection.connect(function(err) {
@@ -24,22 +25,26 @@ router.get('/map', (req, res) => {
 
 /*  Login */
 router.post('/login', (req, res) => {
+
   res.render('maps', { title: 'Welcome' });
 });
 
 /*  Register */
 router.post('/register', (req, res) => {
-  let name = req.body.name;
-  let password = req.body.password;
-  let email = req.body.email;
 
-  console.log(`name: ${name} \n pass: ${password} \n email: ${email}`);
+  let data = {
+    name: req.body.name,
+    password: passHash.generate(req.body.password),
+    email: req.body.email
+  };
+
+  console.log('data: ', data);
 
   let sql = `
     INSERT INTO users(name, password, email, travel_time) 
     VALUES (?, ?, ?, CURRENT_TIMESTAMP)`;
 
-  let values = [name, password, email];
+  let values = [data.name, data.password, data.email];
   //connection.query(sql);
 
   connection.query(sql, values, (error, results, fields) => {
