@@ -6,6 +6,7 @@ let connection = db.createConnection(config);
 const passHash = require('password-hash');
 
 
+
 connection.connect(function(err) {
   if (err) {
     return console.error('error: ' + err.message);
@@ -16,6 +17,7 @@ connection.connect(function(err) {
 /* GET home page. */
 router.get('/', (req, res) => {
   res.render('index', { title: 'Home page' });
+
 });
 
 /* Maps page. */
@@ -42,7 +44,8 @@ router.post('/login', (req, res) => {
       res.render('dashboard', {
         name: results[0].name,
         email: results[0].email,
-        travelTime: results[0].travel_time
+        travelTime: results[0].travel_time,
+        login: true
       });
 
       /*req.session.regenerate(function(){
@@ -59,7 +62,11 @@ router.post('/login', (req, res) => {
     }
   });
 
+});
+
+router.get('/logout', (req, res) => {
   connection.end();
+  res.redirect('/');
 
 });
 
