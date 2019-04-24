@@ -26,7 +26,41 @@ router.get('/map', (req, res) => {
 /*  Login */
 router.post('/login', (req, res) => {
 
-  res.render('maps', { title: 'Welcome' });
+  let email = req.body.email;
+  var password = req.body.password;
+
+  let sql = `SELECT * FROM users WHERE email = ?`;
+  let values = [email];
+
+  connection.query(sql, values, (error, results) => {
+    if (error) {
+      return console.error(error.message);
+    }
+
+    if(results[0] && passHash.verify(password, results[0].password)) {
+
+      res.render('dashboard', {
+        name: results[0].name,
+        email: results[0].email,
+        travelTime: results[0].travel_time
+      });
+
+      /*req.session.regenerate(function(){
+        req.session.login = true;
+        req.session.username = user_login;
+        req.session.data = results[0];
+        res.redirect(req.baseUrl);
+
+      });*/
+
+    } else {
+      console.log(results[0]); // true
+      res.redirect('/');
+    }
+  });
+
+  connection.end();
+
 });
 
 /*  Register */
