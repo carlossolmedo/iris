@@ -59,18 +59,18 @@
                 </button>
             </div>
             <div class="modal-body row">
-                <form class="col-md-10 offset-md-1">
+                <form action="/register" method="post" class="col-md-10 offset-md-1">
                     <div class="form-group">
                         <label for="name">Nom</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="nameSignUp">
+                        <input type="text" name="name" class="form-control" id="nameSignUp" aria-describedby="nameSignUp">
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                        <input type="email" name="email" class="form-control" id="emailSignUp" aria-describedby="emailSignUp">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password">
+                        <input type="password" name="password" class="form-control" id="password">
                     </div>
                     <div class="form-group text-right">
                         <button type="submit" class="btn btn-primary">Submit</button>
