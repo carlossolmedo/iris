@@ -27,7 +27,7 @@ router.get('/map', (req, res) => {
 router.post('/login', (req, res) => {
 
   let email = req.body.email;
-  var password = req.body.password;
+  let password = req.body.password;
 
   let sql = `SELECT * FROM users WHERE email = ?`;
   let values = [email];
@@ -81,16 +81,15 @@ router.post('/register', (req, res) => {
   let values = [data.name, data.password, data.email];
   //connection.query(sql);
 
-  connection.query(sql, values, (error, results, fields) => {
+  connection.query(sql, values, (error, results) => {
     if (error) {
       return console.error(error.message);
     }
     console.log(results);
-    res.send('Data saved');
+    res.redirect('/');
   });
 
   connection.end();
-  console.log('Done !');
 
 });
 
