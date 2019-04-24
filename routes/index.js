@@ -11,4 +11,11 @@ router.get('/map', (req, res, next) => {
   res.render('maps', { title: 'Carte maps' });
 });
 
+/*  Login */
+router.post('/login', (req, res, next) => {
+  res.render('maps', { title: 'Carte maps' });
+
+});
+
+
 module.exports = router;
