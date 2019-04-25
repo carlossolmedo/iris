@@ -1,0 +1,395 @@
+.icon-apple{
+	margin-left: 20px;
+	margin-top: 0px;
+}
+
+.nav-color{
+	background-color: #5353c6;
+	text-align: center;
+}
+
+.nav-paraph{
+	color: #ffffff;
+	font-size: 17px;
+	width: 300px;
+	margin-left: 150px;
+	margin-top: 14px;
+}
+
+.jumb-color{
+/*	background: #F5F5F5;
+*/	border: 1px solid #ffff;
+	background: #ffffff;
+}
+ 
+/*.menu-align{
+	margin-left: 500px;
+}*/
+
+/*.jumb-taille{
+	margin-top: 0px;
+}
+*/
+.icon-fa{
+	height: 40px;
+	width: 40px;
+	background: #ffffff;
+	border-radius: 10px;
+	float: right;
+	margin-right: 20px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.icon-fa1{
+	height: 40px;
+	width: 40px;
+	background: #ffffff;
+	border-radius: 20px;
+	float: right;
+	margin-right: 70px;
+	margin-top: 15px;
+}
+
+.flex1{
+	font-size: 20px;
+}
+
+.flex2, .flex3, .flex4, .flex5, .flex6{
+	border-left: 1px solid lightgray;
+	margin-left: 20px;
+	padding-left: 17px;
+	font-size: 20px;
+}
+
+.icon-user{
+	float: right;
+	margin-right: 50px;
+}
+
+a:hover {
+  text-decoration-line: none;
+  color: black;
+}
+
+#menu, #menu ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+#menu li {
+    display:inline-block;
+    text-align: left;
+}
+
+#menu ul {
+    position:absolute;
+    left:-999em;
+}
+
+#menu li:hover ul{
+    left: -3px;
+}
+
+#menu a {
+    display:block;
+}
+
+.sub-flex{
+	background: #f02678;
+	width: 100%;
+	height: 50px;
+}
+
+.sub-flex1{
+	margin-left: 270px;
+	padding-right: 30px;
+}
+
+.sub-flex2, .sub-flex3{
+	padding-right: 30px;
+	text-align: center;
+}
+
+.f-flex{
+	color: #ffffff;
+}
+
+.f-flex1{
+	color: #0a0a0a;
+}
+
+.dim-img{
+	width: 100%;
+	height: 500px;
+	margin-top: 0px;
+}
+
+.jumb1, .jumb2, .jumb3{
+	margin-bottom: 80px;
+	font-size: 30px;
+}
+
+.jumb4{
+	font-size: 30px;
+}
+
+.dim-img1{
+	width: 100%;
+	margin-top: 30px;
+}
+
+.booton{
+	align-content: center;
+	font-size: 40px;
+	color: black;
+}
+
+.copyright{
+	color: #ffffff;
+}
+
+/*.icon{
+	margin-bottom: 5px;
+}*/
+
+.connex{
+	color: black;
+}
+
+.logo{
+	margin-left: 80px;
+}
+
+.image{
+	background-image: url("../images/trot4.jpeg");
+	width: 100%;
+	height: 667px;
+	text-align: center;
+}
+
+.btn-image{
+	margin-top: 500px;
+	font-size: 30px;
+	width: 260px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.jumb-color2{
+	background: #ffff;
+	border: 1px solid #ffff;
+}
+
+.contact{
+  background-image: url("../images/font3.jpg");
+}
+
+body {
+	background-image: url("../images/font3.jpg");
+} 
+
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+/*ody {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}*/
+
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 2rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+}
+
+
+.a-footer{
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	font-size: 13px;
+}
+
+
+ol {
+	counter-reset: repas; /* on initialise et nomme un compteur */
+} 
+
+.jumb1, .jumb2, .jumb3, .jumb4 {
+	list-style-type: none;
+	counter-increment: repas; /* on incrémente le compteur à chaque nouveau li */
+	margin-bottom: 40px;
+	font-size: 30px
+}
+
+.jumb1:before, .jumb2:before, .jumb3:before, .jumb4:before{
+	content: counter(repas); /* on affiche le compteur */
+	padding: 0 20px 6px;
+	margin-right: 8px;
+	vertical-align: top;
+	background: #ffff;
+	-moz-border-radius: 60px;
+	border-radius: 50px;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: black;
+	border: 1px solid #f02678;	
+	margin-right: 20px;
+}
