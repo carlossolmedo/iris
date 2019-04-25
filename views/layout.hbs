@@ -4,33 +4,46 @@
     <title>{{title}}</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href='css/main.css' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <a class="navbar-brand" href="/">Carousel</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-            </ul>
-            <a class="nav-link" href="cities/paris">Paris</a>
-            {{#if login}}
-                <a class="btn btn-outline-danger" href="/logout">Déconnexion</a>
-            {{else}}
-                <button class="btn btn-outline-success mr-3" data-toggle="modal" data-target="#signIn">Connexion</button>
-                <button class="btn btn-outline-primary" data-toggle="modal" data-target="#signUp">Inscription</button>
-            {{/if}}
+    <nav class="navbar navbar-expand-md fixed-top bg-white site-header sticky-top pt-5">
+        <div class="container d-flex flex-column flex-md-row justify-content-between links">
+            <a class="py-2" href="/">
+                <img src="images/logo-iris.svg" width="150" height="100" alt="iris">
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Nos tarifs</a>
+            <div class="dropdown">
+                <a class="dropdown-toggle py-2 d-none d-md-inline-block" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Villes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="cities/paris">Paris</a>
+                    <a class="dropdown-item" href="cities/lyon">Lyon</a>
+                    <a class="dropdown-item" href="cities/marseille">Marseille</a>
+                </div>
+            </div>
+            <a class="py-2 d-none d-md-inline-block" href="#">Notre vision</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Devenir Iris Stitter</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Contact</a>
+            <div class="py-3">
+                {{#if login}}
+                    <a class="btn btn-outline-danger" href="/logout">Déconnexion</a>
+                {{else}}
+                    <button class="btn btn-outline-success mr-3" data-toggle="modal" data-target="#signIn">Connexion</button>
+                    <button class="btn btn-outline-primary btn-purple" data-toggle="modal" data-target="#signUp">Inscription</button>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+    <nav id="nav" class="navbar navbar-expand-md fixed-top bg-purple">
+        <div class="container container-maps">
+            <div class="text-center">
+                <span>Votre transport pour toujours sur</span>
+                <a href="#" class="navbar-brand"><img width="146" src="images/app-store-badge.png" class="icon-apple"></a>
+                <a href="#" class="navbar-brand"><img width="146" src="images/google-play-badge.png" class="icon-google"></a>
+            </div>
         </div>
     </nav>
 </header>
@@ -38,12 +51,16 @@
 <main role="main">
     {{{body}}}
 </main>
-<footer class="container">
-    <p class="float-right"><a href="#">Back to top</a></p>
-    <p>&copy; 2019 Iris Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-</footer>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/umd/popper.js"></script>
 <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
 </body>
+<footer class="container mt-5">
+    <!--<p class="float-right">
+        <a href="#">
+            <span style="font-size:40px;"><i class="fas fa-arrow-circle-up"></i></span>
+        </a>
+    </p>-->
+    <p>&copy; 2019 Iris Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
 </html>

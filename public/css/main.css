@@ -18,6 +18,24 @@ body {
   box-shadow: 1px 1px 1px 1px #ddd;
 }
 
+.bg-purple {
+  background-color: #5353c6;
+  color: #fff;
+}
+
+.btn-purple {
+  color: #5353c6;
+}
+.btn-purple:hover {
+  background-color: #5353c6;
+  color: #fff;
+}
+
+div.links a {
+  list-style: none;
+  color: black;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 /* Carousel base class */
