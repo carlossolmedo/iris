@@ -42,14 +42,6 @@ router.post('/login', (req, res) => {
         login: true
       });
 
-      /*req.session.regenerate(function(){
-        req.session.login = true;
-        req.session.username = user_login;
-        req.session.data = results[0];
-        res.redirect(req.baseUrl);
-
-      });*/
-
     } else {
       console.log(results[0]); // true
       res.redirect('/');
