@@ -37,13 +37,54 @@ div.links a {
 }
 
 .image-scooter {
+  height: 700px;
   background-image: url("/images/image-scooter.jpg");
-  /* Full height */
-  height: 100%;
-  /* Center and scale the image nicely */
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+.image-scooter .triangle {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border-bottom: 200px solid #e44848;
+  border-left: 1440px solid transparent;
+  bottom: 0;
+  right: 0;
+}
+.image-scooter .block-btn-discover {
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  left: 40%;
+  z-index: 3;
+  width: 150px;
+}
+
+.tiret-white {
+  border-bottom-style: dotted;
+  width: 10%;
+  height: 1px;
+  display: block;
+  margin: auto;
+}
+
+.bg-rose {
+  background-color: #e44848;
+  color: #ffffff;
+  text-align: center;
+}
+
+.bg-blue {
+  background-color: #0069D9;
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  bottom: auto;
+}
+.bg-blue a {
+  color: #e44848;
 }
 
 /* CUSTOMIZE THE CAROUSEL
