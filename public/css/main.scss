@@ -8,6 +8,16 @@ body {
   color: #5a5a5a;
 }
 
+.container-maps {
+  max-width: 40rem;
+}
+#map {
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 1px 1px 1px 1px #ddd;
+}
+
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

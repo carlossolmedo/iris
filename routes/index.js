@@ -17,12 +17,6 @@ connection.connect(function(err) {
 /* GET home page. */
 router.get('/', (req, res) => {
   res.render('index', { title: 'Home page' });
-
-});
-
-/* Maps page. */
-router.get('/map', (req, res) => {
-  res.render('maps', { title: 'Carte maps' });
 });
 
 /*  Login */
