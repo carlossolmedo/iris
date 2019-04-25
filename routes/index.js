@@ -5,8 +5,6 @@ const config = require('./config');
 let connection = db.createConnection(config);
 const passHash = require('password-hash');
 
-
-
 connection.connect(function(err) {
   if (err) {
     return console.error('error: ' + err.message);
@@ -84,6 +82,21 @@ router.post('/register', (req, res) => {
 
   connection.end();
 
+});
+
+/* Paris */
+router.get('/paris', (req, res) => {
+  res.render('paris', { title: 'Paris' });
+});
+
+/* Lyon */
+router.get('/lyon', (req, res) => {
+  res.render('lyon', { title: 'Lyon' });
+});
+
+/* Marseille */
+router.get('/marseille', (req, res) => {
+  res.render('marseille', { title: 'Marseille' });
 });
 
 router.get('/contact', (req, res) => {
